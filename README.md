@@ -33,7 +33,7 @@ beidoublas/Makefile   top-level Makefile that does installation and testing
 
 <!-- To use this code, you need to modify the Makefile with correct g++ installation path and use make for automatic installation. -->
 To better reproduce experiment results, we suggest an NVIDIA GPU with compute capability 8.6.
-TileSpGEMM evaluation requires the CUDA GPU driver, nvcc CUDA compiler, and the cuSPARSE library, all of them are included with the CUDA Toolkit. The artifacts have been tested on Ubuntu 18.04/20.04, and are expected to run correctly under other Linux distributions.
+TileSpGEMM evaluation requires the CUDA GPU driver, the nvcc CUDA compiler, and the cuSPARSE library, all of them are included with the CUDA Toolkit. The artifacts have been tested on Ubuntu 18.04/20.04, and are expected to run correctly under other Linux distributions.
 
 ## Execution of TileSpGEMM
 Our test programs currently support input files encoded using the matrix market format. All matrix market datasets used in this evaluation are publicly available from the SuiteSparse Matrix Collection. 

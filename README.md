@@ -62,7 +62,8 @@ Line 7 prints TileSpGEMM data structure's space consump- tion (in million bytes)
 
 Lines 8-14 print execution time (in milliseconds) of the three algorithm steps and all memory allocation on CPU and GPU (Figure 10 in our paper).
 
-Line 15 prints the number of tiles of the resulting matrix C. Line 16 prints the number of nonzeros of the resulting matrix C.
+Line 15 prints the number of tiles of the resulting matrix C. 
+Line 16 prints the number of nonzeros of the resulting matrix C.
 
 Line 17 prints TileSpGEMM runtime (in milliseconds) and performance (in GFlOPs) (Figures 6 and 7 in our paper).
 

@@ -2,12 +2,13 @@
 
  
 
-**TileSpGEMM** is an open source code of paper:
+**TileSpGEMM** is an open source code that uses a tiled structure to optimize sparse matrix-vector multiplication(SpMV) on GPUs. 
 
-Yuyao Niu, Zhengyang Lu, Haonan Ji, Shuhui Song, Zhou Jin, and Weifeng Liu. 2022. TileSpGEMM: A Tiled Algorithm for Parallel Sparse General Matrix-Matrix Multiplication on GPUs. In 27th ACM SIGPLAN Symposium on Principles and Practice of Parallel Program- ming (PPoPP ’22), 17 pages. DOI:  https://doi.org/10.1145/3503221.3508431
 
 -------------------
+## Paper Information
 
+Yuyao Niu, Zhengyang Lu, Haonan Ji, Shuhui Song, Zhou Jin, and Weifeng Liu. 2022. TileSpGEMM: A Tiled Algorithm for Parallel Sparse General Matrix-Matrix Multiplication on GPUs. In 27th ACM SIGPLAN Symposium on Principles and Practice of Parallel Program- ming (PPoPP ’22), 17 pages. DOI:  https://doi.org/10.1145/3503221.3508431
 
 ## Introduction
 

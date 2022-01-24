@@ -10,6 +10,12 @@
 
 Yuyao Niu, Zhengyang Lu, Haonan Ji, Shuhui Song, Zhou Jin, and Weifeng Liu. 2022. TileSpGEMM: A Tiled Algorithm for Parallel Sparse General Matrix-Matrix Multiplication on GPUs. In 27th ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPoPP ’22), 17 pages. DOI:  https://doi.org/10.1145/3503221.3508431
 
+## Contact us
+
+Yuyao Niu
+
+E-mail: 2019211256@student.cup.edu.cn
+
 ## Introduction
 
 General sparse matrix-matrix multiplication(SpGEMM) executes AB=C, where A, B and C are all sparse matrices. TileSpGEMM sparsifies the tiled method in dense general matrix-matrix multiplication (GEMM) and saves each non-empty tile in a sparse form. By this way, the three performance issues of load imbalance, allocating proper size for intermediate products and designing a sparse accumulator can be resolved. Several optimization techniques, such as binary search for set intersection, bit mask operations for symbolic SpGEMM, and an adaptive method for selecting sparse or dense accumulator in on-chip memory, are also developed to improve efficiency. TileSpGEMM provides a version of CUDA on a high parallelism currently. 
@@ -65,11 +71,7 @@ Line 18 prints the checking result after comparing our output with the one gener
 ## Release version
 Jan 3,2022 Version Alpha
 
-## Contact us
 
-Yuyao Niu
-
-E-mail: 2019211256@student.cup.edu.cn
 
 
  

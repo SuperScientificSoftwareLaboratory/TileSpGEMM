@@ -6,7 +6,7 @@
 
 
 -------------------
-## Paper Information
+## Paper information
 
 Yuyao Niu, Zhengyang Lu, Haonan Ji, Shuhui Song, Zhou Jin, and Weifeng Liu. 2022. TileSpGEMM: A Tiled Algorithm for Parallel Sparse General Matrix-Matrix Multiplication on GPUs. In 27th ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPoPP ’22), 17 pages. DOI:  https://doi.org/10.1145/3503221.3508431
 
@@ -40,7 +40,7 @@ Our test programs currently support input files encoded using the matrix market 
 3. Run SpGEMM code on matrix data with auto-tuning in double precision. The GPU compilation takes an optional d=<gpu-device, e.g., 0> parameter that specifies the GPU device to run if multiple GPU devices are available at the same time, and another optional aat=<transpose, e.g., 0> parameter that means computing C = A^2 (-aat 0) or C = AA^T (-aat 1)). 
 > **$ ./test -d 0 -aat 0 <path/to/dataset/mtx>**
 
-## Output Information
+## Output information
 
 Lines 1-2 outputs the input matrix's information including the path of matrix file, The number of rows, columns and nonzeros.
 
@@ -64,6 +64,13 @@ Line 18 prints the checking result after comparing our output with the one gener
 
 ## Release version
 Jan 3,2022 Version Alpha
+
+## Contact us
+
+Yuyao Niu
+
+E-mail: 2019211256@student.cup.edu.cn
+
 
  
 

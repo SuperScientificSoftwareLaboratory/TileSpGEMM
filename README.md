@@ -48,7 +48,7 @@ Our test programs currently support input files encoded using the matrix market 
 
 ## Output information
 
-Lines 1-2 outputs the input matrix's information including the path of matrix file, The number of rows, columns and nonzeros.
+Lines 1-2 output the input matrix's information including the path of matrix file, The number of rows, columns and nonzeros.
 
 Line 3 prints the file loading time (in seconds).
 

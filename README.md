@@ -14,7 +14,7 @@ Yuyao Niu, Zhengyang Lu, Haonan Ji, Shuhui Song, Zhou Jin, and Weifeng Liu. 2022
 
 Yuyao Niu
 
-E-mail: 2019211256@student.cup.edu.cn
+E-mail: niyyuyao@gmail.com
 
 ## Introduction
 

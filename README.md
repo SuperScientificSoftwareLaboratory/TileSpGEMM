@@ -12,7 +12,7 @@ Yuyao Niu, Zhengyang Lu, Haonan Ji, Shuhui Song, Zhou Jin, and Weifeng Liu. 2022
 
 ## Contact us
 
-Yuyao Niu
+If you have any questions about running the code, please contact Yuyao Niu. 
 
 E-mail: yuyao.niu.phd@gmail.com
 

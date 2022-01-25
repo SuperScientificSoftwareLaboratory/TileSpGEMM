@@ -18,7 +18,7 @@ E-mail: yuyao.niu.phd@gmail.com
 
 ## Introduction
 
-General sparse matrix-matrix multiplication(SpGEMM) executes AB=C, where A, B and C are all sparse matrices. TileSpGEMM sparsifies the tiled method in dense general matrix-matrix multiplication (GEMM) and saves each non-empty tile in a sparse form. By this way, the three performance issues of load imbalance, allocating proper size for intermediate products and designing a sparse accumulator can be resolved. Several optimization techniques, such as binary search for set intersection, bit mask operations for symbolic SpGEMM, and an adaptive method for selecting sparse or dense accumulator in on-chip memory, are also developed to improve efficiency. TileSpGEMM provides a version of CUDA on a high parallelism currently. 
+General sparse matrix-matrix multiplication(SpGEMM) executes C=AB, where A, B and C are all sparse matrices. TileSpGEMM sparsifies the tiled method in dense general matrix-matrix multiplication (GEMM) and saves each non-empty tile in a sparse form. By this way, the three performance issues of load imbalance, allocating proper size for intermediate products and designing a sparse accumulator can be resolved. Several optimization techniques, such as binary search for set intersection, bit mask operations for symbolic SpGEMM, and an adaptive method for selecting sparse or dense accumulator in on-chip memory, are also developed to improve efficiency. TileSpGEMM provides a version of CUDA on a high parallelism currently. 
 
 
 <!-- ## Structure

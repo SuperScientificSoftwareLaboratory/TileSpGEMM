@@ -177,9 +177,9 @@ printf("tile space overhead = %.2f MB\n", mem);
 
         csr2tile_col_major(matrixB);
 
-        free(matrixA->rowpointer);
-        free(matrixA->columnindex);
-        free(matrixA->value);
+        // free(matrixA->rowpointer);
+        // free(matrixA->columnindex);
+        // free(matrixA->value);
 
         int blk_intersec_bitmask_len = ceil((double)matrixA->tilen / 32.0);
         double densityA = (double)matrixA->numtile / ((double)matrixA->tilem*(double)matrixA->tilen);

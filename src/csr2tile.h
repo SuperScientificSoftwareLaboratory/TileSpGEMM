@@ -174,7 +174,7 @@ void step3_kernel(SMatrix *matrix, int nnz_max, int tilecnt_max)
             int pre_nnz = tile_nnz[tile_id] - tile_nnz[tile_ptr[blki]];
 
             unsigned char *ptr_temp = tile_csr_Ptr + tile_id * BLOCK_SIZE;
-            for (int ri = 0; ri < BLOCK_SIZE; ri++)
+            for (int ri = 0; ri < rowlen; ri++)
             {
                 int start = ptr_temp[ri];
                 int stop = ri == rowlen - 1 ? tilennz : ptr_temp[ri + 1];
@@ -240,7 +240,7 @@ void csr2tile_row_major(SMatrix *matrix)
     memset(matrix->tile_csr_Col, 0, matrix->nnz * sizeof(unsigned char));
 
     matrix->tile_csr_Value = (MAT_VAL_TYPE *)malloc(matrix->nnz * sizeof(MAT_VAL_TYPE));
-    memset(matrix->tile_csr_Col, 0, matrix->nnz * sizeof(MAT_VAL_TYPE));
+    memset(matrix->tile_csr_Value, 0, matrix->nnz * sizeof(MAT_VAL_TYPE));
 
     matrix->mask = (unsigned short *)malloc(matrix->numtile * BLOCK_SIZE * sizeof(unsigned short));
     memset(matrix->mask, 0, matrix->numtile * BLOCK_SIZE * sizeof(unsigned short));
@@ -357,7 +357,7 @@ void csr2tile_col_major(SMatrix *matrix)
     memset(matrix->tile_csr_Col, 0, matrix->nnz * sizeof(unsigned char));
 
     matrix->tile_csr_Value = (MAT_VAL_TYPE *)malloc(matrix->nnz * sizeof(MAT_VAL_TYPE));
-    memset(matrix->tile_csr_Col, 0, matrix->nnz * sizeof(MAT_VAL_TYPE));
+    memset(matrix->tile_csr_Value, 0, matrix->nnz * sizeof(MAT_VAL_TYPE));
 
     matrix->mask = (unsigned short *)malloc(matrix->numtile * BLOCK_SIZE * sizeof(unsigned short));
     memset(matrix->mask, 0, matrix->numtile * BLOCK_SIZE * sizeof(unsigned short));

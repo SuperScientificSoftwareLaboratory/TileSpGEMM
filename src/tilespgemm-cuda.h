@@ -270,6 +270,7 @@ __global__ void tile_spgemm_step1_cuda_spa_kernel(int *d_blkrowptrA, int *d_blkc
 
     for (int i = lane_id; i < nmasks; i += WARP_SIZE)
         bitmask_local[i] = 0;
+    __syncwarp(); // zeroing must land before other lanes' atomicOr
 
     int astart = d_blkrowptrA[global_warp_id];
     int astop = d_blkrowptrA[global_warp_id + 1];
@@ -285,7 +286,7 @@ __global__ void tile_spgemm_step1_cuda_spa_kernel(int *d_blkrowptrA, int *d_blkc
             atomicOr(&bitmask_local[colidx / 32], mask);
         }
     }
-    //__syncthreads();
+    __syncwarp(); // other lanes' atomicOr must be visible before the popc read
 
     int cnt = 0;
     for (int i = lane_id; i < nmasks; i += WARP_SIZE)
@@ -316,6 +317,7 @@ __global__ void tile_spgemm_step1_numeric_cuda_spa_kernel(int *d_blkrowptrA, int
 
     for (int i = lane_id; i < nmasks_warpwise; i += WARP_SIZE)
         bitmask_local[i] = 0;
+    __syncwarp(); // zeroing must land before other lanes' atomicOr
 
     int cbase = d_blkrowptrC[global_warp_id];
 
@@ -333,6 +335,7 @@ __global__ void tile_spgemm_step1_numeric_cuda_spa_kernel(int *d_blkrowptrA, int
             atomicOr(&bitmask_local[colidx / 32], mask);
         }
     }
+    __syncwarp(); // other lanes' atomicOr must be visible before the mask read
 
     int cnt = 0;
     int offset = 0;
